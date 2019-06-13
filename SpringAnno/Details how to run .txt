@@ -1,0 +1,39 @@
+
+	The application is an Maven Project to handle all the configurations from pom.xml file we use all the dependencies in this file.
+
+
+	App.java is main file to execute spring core which will access data from other java files.
+	
+	Here in this Spring core project we are running the code on Samsung process
+	
+	In General we are having no of companies producing processors.
+	
+	In code we taken SnapDragon and MediaTek both implement processors so taken MobileProcessor as Interface.
+	SnapDragon and MediaTek are the child class to MobileProcessor.
+	
+	We needed to get Samsung Mobile Processor
+	
+	we are using 
+	@Autowired -which connect to particular object.
+	@Qualifier("snapDragon") -It takes the object automatically using class name.
+	
+	AppConfig is used to configure the application
+	@Configuration
+	@ComponentScan(basePackages="com.swamy.SpringAnno")-It scan the component from the package
+	
+	SnapDragon and MediaTek both implement processors
+	@Component
+	
+	ApplicationContext factory=new AnnotationConfigApplicationContext(AppConfig.class);
+	We can get content by using BeanFactory and ApplicationContext both use for same purpose.
+	
+	BeanFactory can handle less data support
+	
+	ApplicationContext can handle the real application data support
+	
+	How to run the code:
+	
+	Right click on App.java and select run as and click on Java Application.
+	
+	
+	
